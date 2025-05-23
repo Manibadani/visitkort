@@ -19,13 +19,19 @@
     }
 
     .card {
-      background-color: #4a4a4a;
+      background-image: url('background.jpg'); /* byt ut till ditt filnamn */
+      background-size: cover;      /* gör så bakgrunden täcker hela området */
+      background-position: center; /* centrerar bilden */
+      background-repeat: no-repeat; /* undviker att bilden upprepas */
       border-radius: 10px;
-      padding: 30px 40px 40px 40px;
+      padding: 40px;
       width: 500px;
+      height: 200px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
       text-align: left;
+      color: #ffffff;              /* vit text över bilden */
     }
+
 
     .card img {
       display: block;
