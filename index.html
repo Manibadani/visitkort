@@ -31,21 +31,22 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
       text-align: left;
       color: black;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
     }
 
     .card img {
-      display: block;
-      margin-left: auto;
-      margin-right: -30px;
-      width: 300px;
+      width: 320px;
       height: auto;
-      margin-bottom: 20px;
       margin-top: -30px;
+      margin-bottom: 20px;
+      flex-shrink: 0;
     }
 
-    /* Ny klass för att flytta upp texten */
     .text-content {
-      margin-top: -35px; /* Justera detta värde för att flytta mer/mindre */
+      margin-top: 0;
       font-weight: bold;
     }
 
@@ -75,6 +76,7 @@
       height: 18px;
       margin-right: 10px;
       fill: black;
+      flex-shrink: 0;
     }
 
     a {
@@ -85,6 +87,56 @@
 
     a:hover {
       text-decoration: underline;
+    }
+
+    /* Mobilanpassning */
+    @media (max-width: 480px) {
+      body {
+        height: auto; /* Tillåter sidan att växa vertikalt */
+        padding: 20px 0;
+      }
+
+      .card {
+        width: 90vw; /* Tar nästan hela bredden */
+        height: auto; /* Låt höjden anpassa sig */
+        padding: 20px;
+        box-shadow: none; /* Mindre skugga på liten skärm */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+      }
+
+      .card img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 0 20px 0;
+        margin-top: 0;
+      }
+
+      .text-content {
+        margin-top: 0;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+      }
+
+      .title {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+      }
+
+      .info-item {
+        justify-content: center;
+        font-size: 1rem;
+        margin-bottom: 12px;
+      }
+
+      .info-item svg {
+        margin-right: 8px;
+      }
     }
   </style>
 </head>
@@ -114,5 +166,6 @@
   </div>
 </body>
 </html>
+
 
 
