@@ -19,37 +19,18 @@
     }
 
     .card {
-      position: relative;          /* Viktigt för att positionera blur-bilden */
+      background-image: url('background.jpg'); /* byt ut till ditt filnamn */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      padding: 40px;
       width: 440px;
       height: 180px;
-      border-radius: 10px;
-      overflow: hidden;            /* Klipper bort suddiga kanter */
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
       text-align: left;
       color: black;
-    }
-
-    .background-blur {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-image: url('background.jpg'); /* byt till din bild */
-      background-size: cover;
-      background-position: center;
-      filter: blur(6px);           /* Här styr du suddigheten */
-      transform: scale(1.1);       /* Förhindra kanter vid blur */
-      z-index: 1;
-    }
-
-    .text-content {
-      position: relative;          /* ovanpå blur */
-      z-index: 2;
-      padding: 40px;
-      background-color: rgba(255, 255, 255, 0.7);
-      height: 100%;
-      box-sizing: border-box;
-      margin-top: -30px;           /* Flyttar texten lite upp */
-      font-weight: 900;
-      /* Tar bort drop-shadow från här (om du vill lägga till, flytta hit) */
     }
 
     .card img {
@@ -60,21 +41,25 @@
       height: auto;
       margin-bottom: 20px;
       margin-top: -30px;
-      position: relative;
-      z-index: 3; /* ovanför bakgrund och text */
+    }
+
+    /* Ny klass för att flytta upp texten */
+    .text-content {
+      margin-top: -30px; /* Justera detta värde för att flytta mer/mindre */
+      font-weight: bold;
     }
 
     h1 {
       font-size: 1.6rem;
       margin: 0 0 5px 0;
-      font-weight: 900;
+      font-weight: bold;
     }
 
     .title {
       font-size: 1.1rem;
       color: black;
       margin: 0 0 25px 0;
-      font-weight: 900;
+      font-weight: bold;
     }
 
     .info-item {
@@ -105,8 +90,6 @@
 </head>
 <body>
   <div class="card">
-    <div class="background-blur"></div>
-
     <img src="logo.png" alt="Precisiona Logo" />
 
     <div class="text-content">
